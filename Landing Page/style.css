@@ -1,0 +1,137 @@
+:root {
+    --primary-color: #0A1828;     
+    --secondary-color: #178582;    
+    --accent-color: #BFA181;      
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--accent-color);
+    font-weight: 100;
+    text-shadow: 1px 1px #000;
+}
+
+body {
+    line-height: 1.6;
+    font-family: "Trirong", serif;
+    background:linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.4)), url('https://img.freepik.com/premium-photo/tv-cabinet-modern-living-room-with-armchair-plant-dark-marble-wall-3d-rendering_41470-3512.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    padding: 10px;
+    background-color: var(--primary-color);
+}
+
+.navbar {
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; 
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: var(--secondary-color);
+    position: relative;
+    font-size: 1rem;
+}
+
+nav a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-bottom: 2px solid var(--accent-color);
+    animation: spread 2s linear;
+}
+
+nav a:hover::before{
+    width: 90%;
+}
+
+@keyframes spread {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 200px 0;
+    }
+  }
+
+.hero {
+    padding: 30px;
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-content {
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 60px;
+}
+
+.hero button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #d2bda7;
+    border: none;
+    cursor: pointer;
+    box-shadow: 1px 1px #000;
+    border-radius: 20px;
+    color: #333;
+    text-shadow: none;
+}
+
+.hero button:hover{
+    transform: scale(1.03);
+}
+
+.newsletter {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.newsletter h2 {
+    margin-bottom: 20px;
+}
+
+.newsletter input[type="email"],
+.newsletter button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-shadow: none;
+}
+.newsletter button{
+    background-color: var(--secondary-color);
+    box-shadow: 1px 1px #000;
+    color: #E6E6FA;
+}
+
+/* Styling for footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);;
+}
